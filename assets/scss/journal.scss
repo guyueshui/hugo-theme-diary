@@ -28,6 +28,12 @@ $post-meta-size: 16px;
 $tag-category-title-size: 22px;
 $toc-size: 16px;
 
+/*
+ * Note that the position of this statement matters!
+ * It must be before of the first use of those variables you want to overwrite.
+ */
+@import "custom";
+
 $dark-accent: darken($color-accent, 10%);
 $deep-dark-accent: darken($color-accent, 50%);
 $color-text: $deep-dark-accent;
@@ -454,6 +460,7 @@ a {
     .nav-subtitle {
       margin-top: 8px;
       font-size: $nav-subtitle-size;
+      font-family: $default-font-list;
     }
     &:hover {
       border-right: 2px solid

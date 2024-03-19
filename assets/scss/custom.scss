@@ -1,0 +1,64 @@
+// ==============================
+// Custom style
+// ==============================
+
+$color-accent: #b22222;
+$default-font-list: 'Linux Libertine O', 'source-han-serif-sc', 'Source Han Serif SC',
+  'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif',
+  'Noto Serif SC', 'Songti SC', 'Noto Serif SC', 'Microsoft YaHei', serif;
+$sans-preferred-font-list: Linux Biolinum O, 'source-han-sans-sc', 'Source Han Sans SC',
+  'Source Han Sans CN', 'Source Han Sans TC', 'Source Han Sans TW', 'Source Han Sans',
+  Athelas, STHeiti, Noto Sans SC, Microsoft Yahei, serif;
+
+@font-face {
+  font-family: Linux Libertine O;
+  src: url("/fonts/Libertine/LinLibertine_R.otf");
+}
+
+@font-face {
+  font-family: Linux Biolinum O;
+  src: url("/fonts/Libertine/LinBiolinum_R.otf");
+}
+
+blockquote {
+  font-family: 'Linux Libertine O', 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
+}
+
+figure {
+  // float: right;
+  display: inline-block;
+  /* make img centerd @yychi */
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  padding: 0.6em 0;
+  position: relative;
+  // border: thin silver solid;
+}
+
+figcaption {
+  // background-color: #222;
+  color: gray;
+  padding: 3px;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-size: smaller;
+}
+
+// footnote link
+// a[href^="#fn:"],
+// Back to footnote link
+// a[href^="#fnref:"] {
+//   text-decoration: none;
+//   // color: $orange;
+//   font-family: monospace;
+// }
+// make footnote indicator looks like [x],
+// see: https://discourse.gohugo.io/t/footnote-styling/114/7
+a[href^="#fn:"]:before{ content: '[' }
+a[href^="#fn:"]:after{ content: ']' }
+a > code {
+  color: $color-accent;
+  text-decoration: none;
+}
